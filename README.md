@@ -4,26 +4,23 @@ Windows installers for Rimo, a local-first desktop workbench.
 
 **Source code is private. This repository publishes installers only.**
 
-- [Download Rimo 0.5.0](https://github.com/Kyo803/rimo-releases/releases/tag/v0.5.0)
+- [Download Rimo 0.6.0](https://github.com/Kyo803/rimo-releases/releases/tag/v0.6.0)
 - [Latest installer](https://github.com/Kyo803/rimo-releases/releases/latest)
 - Windows 10/11 x64
 - Installers are unsigned; SmartScreen may ask for confirmation
-- First launch creates `~/Desktop/Rimo`
+- First launch opens the setup assistant and creates `~/Desktop/Rimo` or the folder you choose
 
-## What is new in 0.5.0
+## What is new in 0.6.0
 
-A stabilization pass: a fresh vault is truly empty, with no sample projects,
-cards, pages, dashboards, widgets, canvases or members. Rimo now has page-specific
-right-click menus, draggable sidebar projects/boards/pages, a redesigned title
-bar, hidden scrollbars and a clean Rust-backed vault.
+First-run onboarding: choose your vault folder, name the workspace, add your
+name, create the first project, pick a theme and accent, and see the essential
+keyboard shortcuts. Everything is written through the local Rust backend.
+Settings -> Setup assistant reopens it.
 
-Canvas: columns are drawn as rectangles, notes/tasks/checklists attach by
-dragging or via Attach to column, checklist checkboxes are robust, and
-connections always paint above notes.
-
-Also included: the custom widget sandbox, canvas reader, device image import,
-image sharing, GitHub stack analysis, syntax colours, calendars and the local
-vault.
+The canvas now has rectangle-drawn columns, drag/menu note attachment, robust
+checklists and connections above notes. The title bar is redesigned, scrollbars
+are hidden, sidebar projects/boards/pages are draggable, and a fresh vault has
+no placeholder data.
 
 Rimo does not require an account, does not include telemetry and does not call
 the network on launch. Optional online features are opt-in.
