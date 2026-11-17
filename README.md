@@ -4,31 +4,29 @@ Windows installers for Rimo, a local-first desktop workbench.
 
 **Source code is private. This repository publishes installers only.**
 
-- [Download Rimo 0.9.0](https://github.com/Kyo803/rimo-releases/releases/tag/v0.9.0)
+- [Download Rimo 0.10.0](https://github.com/Kyo803/rimo-releases/releases/tag/v0.10.0)
 - [Latest installer](https://github.com/Kyo803/rimo-releases/releases/latest)
 - Windows 10/11 x64
 - Installers are unsigned; SmartScreen may ask for confirmation
 - First launch opens the setup assistant and creates `~/Desktop/Rimo` or the folder you choose
 
-## What is new in 0.9.0
+## What is new in 0.10.0
 
-Chat is end-to-end encrypted. Each desktop has an X25519 device key, each
-conversation has a random 256-bit key wrapped for member devices, and message
-bodies, reactions and attachments reach the server as AES-256-GCM ciphertext.
-The server stores wrapped keys and ciphertext only.
+Proper profiles on top of end-to-end encrypted chat: upload an avatar and banner,
+set pronouns, a status line and a bio, and open a real profile card from any
+avatar or name. Avatar images replace initials across the ledger, conversation
+list, headers and member lists. Presence can be hidden.
 
-Search now runs locally over a decrypted cache instead of on the server, and
-chat details shows a safety code derived from every member device fingerprint.
-The ledger message design, replies, edits, attachments, groups, pin/mute,
-blocking, profiles and account controls from 0.8.0 remain.
+Profile images are public to signed-in accounts. Chat message bodies, reactions
+and attachments remain AES-256-GCM encrypted; the server stores ciphertext and
+wrapped conversation keys only.
 
-Metadata such as membership, sender, timestamps and file names is still visible
-to the server. There is no per-message ratchet yet, no portable key backup and no
-device-management UI; messages sent before 0.9.0 remain in the old plaintext
-format.
+Frames, nameplates, custom profile effects, voice/video calls, per-message
+forward secrecy, portable key backup and email recovery are later work.
 
 Also included since 0.6.0: first-run onboarding, sandboxed custom widgets, the
-detective canvas, the GitHub tracker and a local SQLite vault.
+detective canvas, the GitHub tracker, the ledger chat design and a local SQLite
+vault.
 
 Rimo does not require an account, does not include telemetry and does not call
 the network on launch. Chat and the GitHub tracker are opt-in; everything else
